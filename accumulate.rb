@@ -1,16 +1,7 @@
 class Array
   def accumulate
-    # iterate through array. yield to block for each element and give back that element.
-    # If no block given give back enum
-    output = []
-    if block_given?
-      for value in self do
-        output << yield(value)
-      end
-    else
-      output = to_enum :accumulate
-    end
-    output
+    return enum_for { length } unless block_given?
+    each_with_object([]) { |value, output| output << yield(value) }
   end
 end
 
