@@ -44,6 +44,14 @@ class ArrayTest < Minitest::Test
     assert_equal copy, original
   end
 
+
+  def test_no_block_is_passed
+    # skip
+    result = [1, 2, 3].accumulate
+    assert_instance_of Enumerator, result
+  end
+
+
   # Problems in exercism evolve over time, as we find better ways to ask
   # questions.
   # The version number refers to the version of the problem you solved,
@@ -61,7 +69,7 @@ class ArrayTest < Minitest::Test
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
 
   def test_bookkeeping
-    skip
+    # skip
     assert_equal 1, BookKeeping::VERSION
   end
 end
