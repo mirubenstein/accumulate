@@ -51,7 +51,6 @@ class ArrayTest < Minitest::Test
     assert_instance_of Enumerator, result
   end
 
-
   # Problems in exercism evolve over time, as we find better ways to ask
   # questions.
   # The version number refers to the version of the problem you solved,
